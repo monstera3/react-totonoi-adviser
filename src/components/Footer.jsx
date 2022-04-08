@@ -22,7 +22,7 @@ export const Footer = () =>{
 
 const FooterTop = styled.div`
   max-width: 1440px;
-  margin: 20rem auto;
+  margin: 0 auto;
   //background-color: lightblue;
   .info{
     display: flex;
