@@ -11,15 +11,20 @@ export const Content = () =>{
     setQuestionFlag( prevState => !prevState);
   };
 
+  const ContentTopAndButton = () => {
+    return (
+      <ContentTop>
+        <button onClick={onClickSwitchQuestionFlag}>診断 START</button>
+      </ContentTop>
+    )
+  }
 
   return(
     <div>
-      <ContentTop>
-        <button onClick={onClickSwitchQuestionFlag}>
-          診断 START
-        </button>
-        {questionFlag ? <ContentTop />: <QuestionNo1 />}
-      </ContentTop>
+      {questionFlag
+        ? ContentTopAndButton()
+        : <QuestionNo1 />
+      }
     </div>
 
   );
