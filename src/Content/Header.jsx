@@ -17,6 +17,7 @@ export const Header = () =>{
 
 const HeaderTop = styled.div`
   max-width: 1440px;
+  margin: 0 auto;
   .header{
     display: flex;
     justify-content: space-between;
@@ -26,6 +27,7 @@ const HeaderTop = styled.div`
     }
     ul{
       display: flex;
+      justify-content: space-between;
     }
   }
   
