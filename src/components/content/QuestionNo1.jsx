@@ -27,6 +27,8 @@ export const QuestionNo1 = () =>{
 const QuestionTop = styled.div`
   margin: 0 auto;
   font-size: 1.7rem;
+  max-width: 1440px;
+  min-height: 700px;
   .question-number{
     display: flex;
     justify-content: space-between;
