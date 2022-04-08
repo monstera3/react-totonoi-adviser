@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   a{
     text-decoration: none;
-    color: rgb(51,51,51);
+    color: #666;
   }
   img{
     width: 100%;
