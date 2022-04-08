@@ -19,6 +19,8 @@ export const App = () => {
 const GlobalStyle = createGlobalStyle`
   #root {
     font-family: 'Noto Sans JP', sans-serif;
+    color: #666;
+    
   }
   #root li{
     list-style: none;
