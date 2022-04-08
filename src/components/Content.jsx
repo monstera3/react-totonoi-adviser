@@ -5,17 +5,25 @@ import {QuestionNo1} from "./content/QuestionNo1";
 
 export const Content = () =>{
 
-  const onClickSwitchQuestionFlag = () => {
-    setQuestionFlag(!questionFlag);
-  };
   const [questionFlag, setQuestionFlag] = useState(false);
 
+  const onClickSwitchQuestionFlag = () => {
+    setQuestionFlag( prevState => !prevState);
+  };
+
+
   return(
-    <ContentTop>
-      <img src={hereImg} alt=""/>
-      <button onClick={onClickSwitchQuestionFlag}>診断 START</button>
-      {questionFlag &&  <QuestionNo1 />}
-    </ContentTop>
+    <div>
+      <ContentTop>
+        <img src={hereImg} alt=""/>
+
+        <button onClick={onClickSwitchQuestionFlag}>
+          診断 START
+        </button>
+        {questionFlag ? 'OPEN': <QuestionNo1 />}
+      </ContentTop>
+    </div>
+
   );
 };
 
