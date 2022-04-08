@@ -22,8 +22,8 @@ export const Footer = () =>{
 
 const FooterTop = styled.div`
   max-width: 1440px;
-  margin: 5% auto;
-  background-color: lightblue;
+  margin: 150px auto;
+  //background-color: lightblue;
   .info{
     display: flex;
     justify-content: space-between;
