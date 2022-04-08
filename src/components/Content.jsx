@@ -5,7 +5,7 @@ import {QuestionNo1} from "./content/QuestionNo1";
 
 export const Content = () =>{
 
-  const [questionFlag, setQuestionFlag] = useState(false);
+  const [questionFlag, setQuestionFlag] = useState(true);
 
   const onClickSwitchQuestionFlag = () => {
     setQuestionFlag( prevState => !prevState);
@@ -20,7 +20,7 @@ export const Content = () =>{
         <button onClick={onClickSwitchQuestionFlag}>
           診断 START
         </button>
-        {questionFlag ? 'OPEN': <QuestionNo1 />}
+        {questionFlag ? <ContentTop />: <QuestionNo1 />}
       </ContentTop>
     </div>
 
