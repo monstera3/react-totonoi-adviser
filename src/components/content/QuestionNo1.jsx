@@ -5,6 +5,10 @@ export const QuestionNo1 = () =>{
 
   return(
     <QuestionTop>
+      <div className="question-number">
+        <p>・・・</p>
+        <p>3/5</p>
+      </div>
       <div className="question-image">
         <div className="question-content">
           <p>1.今はどんな気分？</p>
@@ -23,6 +27,11 @@ export const QuestionNo1 = () =>{
 const QuestionTop = styled.div`
   margin: 0 auto;
   font-size: 1.7rem;
+  .question-number{
+    display: flex;
+    justify-content: space-between;
+    
+  }
   .question-image{
     background: url(${question1Img}) no-repeat center /cover;
     height: 950px;
