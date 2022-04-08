@@ -1,9 +1,9 @@
-
+import styled from "styled-components";
 import logoImg from "../assets/images/logo.png"
 
 export const Header = () =>{
   return(
-    <div>
+    <HeaderTop>
       <div className="header">
         <img src={logoImg} alt=""/>
         <ul>
@@ -11,7 +11,22 @@ export const Header = () =>{
           <li>お問い合わせ</li>
         </ul>
       </div>
-    </div>
+    </HeaderTop>
   );
 };
 
+const HeaderTop = styled.div`
+  max-width: 1440px;
+  .header{
+    display: flex;
+    justify-content: space-between;
+    img{
+      width: 80px;
+      height: 80px;
+    }
+    ul{
+      display: flex;
+    }
+  }
+  
+`;
