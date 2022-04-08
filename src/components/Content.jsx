@@ -15,8 +15,6 @@ export const Content = () =>{
   return(
     <div>
       <ContentTop>
-        <img src={hereImg} alt=""/>
-
         <button onClick={onClickSwitchQuestionFlag}>
           診断 START
         </button>
@@ -28,24 +26,25 @@ export const Content = () =>{
 };
 
 const ContentTop = styled.div`
-  max-width: 1440px;
-  max-height: 800px;
+  background: url(${hereImg}) no-repeat center /cover;
   margin: 0 auto;
-  img{
-    position: relative;
-  }
+  position: relative;
+  max-width: 1440px;
+  min-height: 700px;
+  z-index: 0;
+
   button{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
-    margin:0;
     padding:1% 3%;
     color: #666;
     background-color: white;
     font-size: 24px;
     border-radius: 50px;
     border:none;
+    z-index:1;
     :hover{
      background-color: #666; 
       color: white;
