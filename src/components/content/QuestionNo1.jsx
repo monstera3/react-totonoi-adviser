@@ -49,7 +49,7 @@ const QuestionTop = styled.div`
     p{
       margin: 3% 18%;
       padding: 4%;
-      background-color: lightblue;
+      //background-color: lightblue;
     }
     ul{
       li{
