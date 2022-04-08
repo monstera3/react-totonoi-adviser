@@ -15,9 +15,6 @@ export const Content = () =>{
       <img src={hereImg} alt=""/>
       <button onClick={onClickSwitchQuestionFlag}>診断 START</button>
       {questionFlag &&  <QuestionNo1 />}
-      {/*<QuestionNo1 />*/}
-      {/*<p>質問内容</p>*/}
-
     </ContentTop>
   );
 };
