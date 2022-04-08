@@ -16,7 +16,6 @@ const ContentTop = styled.div`
   margin: 0 auto;
   img{
     position: relative;
-    width: 100%;
   }
   button{
     position: absolute;
@@ -29,6 +28,7 @@ const ContentTop = styled.div`
     background-color: white;
     font-size: 24px;
     border-radius: 50px;
+    border:none;
     :hover{
      background-color: #666; 
       color: white;

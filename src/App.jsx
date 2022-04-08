@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     color: rgb(51,51,51);
   }
   img{
-    max-width: 100%;
+    width: 100%;
   }
 
 `;
