@@ -2,10 +2,13 @@ import styled from "styled-components";
 import hereImg from "../assets/images/hero.png"
 
 export const Content = () =>{
+
+  const onClickButton = () => alert();
+
   return(
     <ContentTop>
       <img src={hereImg} alt=""/>
-      <button>診断 START</button>
+      <button onClick={onClickButton}>診断 START</button>
     </ContentTop>
   );
 };
