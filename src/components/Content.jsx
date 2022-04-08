@@ -1,14 +1,23 @@
 import styled from "styled-components";
 import hereImg from "../assets/images/hero.png"
+import {useState} from "react";
+import {QuestionNo1} from "./content/QuestionNo1";
 
 export const Content = () =>{
 
-  const onClickButton = () => alert();
+  const onClickSwitchQuestionFlag = () => {
+    setQuestionFlag(!questionFlag);
+  };
+  const [questionFlag, setQuestionFlag] = useState(false);
 
   return(
     <ContentTop>
       <img src={hereImg} alt=""/>
-      <button onClick={onClickButton}>診断 START</button>
+      <button onClick={onClickSwitchQuestionFlag}>診断 START</button>
+      {questionFlag &&  <QuestionNo1 />}
+      {/*<QuestionNo1 />*/}
+      {/*<p>質問内容</p>*/}
+
     </ContentTop>
   );
 };
