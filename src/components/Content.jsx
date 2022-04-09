@@ -13,22 +13,15 @@ export const Content = () =>{
     setQuestionFlag( prevState => !prevState);
   };
 
-  const ContentTopAndButton = () => {
-    return (
+  return(
+    <div>
       <ContentStyle backgroundImg={ContentImg(questionFlag)}>
         {questionFlag
           ? <QuestionStart onClick={onClickSwitchQuestionFlag} />
           : <QuestionNo1 />
         }
       </ContentStyle>
-    )
-  }
-
-  return(
-    <div>
-      {ContentTopAndButton()}
     </div>
-
   );
 };
 
