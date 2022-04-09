@@ -10,10 +10,14 @@ export const Question = () =>{
       </div>
       <div className="question">
         <p>1.今はどんな気分？</p>
-        <ul>
-          <a href="https://www.google.com"><li className="a-answer">A.わくわく、うきうき</li></a>
-          <a href="https://www.google.com"><li className="b-answer">B.不安、落ち込み気味</li></a>
-        </ul>
+
+        <button className="a-answer">A.わくわく、うきうき</button>
+        <button className="b-answer">B.不安、落ち込み気味</button>
+
+        {/*<ul>*/}
+        {/*  <li className="a-answer"><button >A.わくわく、うきうき</button></li>*/}
+        {/*  <li className="b-answer"><button >B.不安、落ち込み気味</button></li>*/}
+        {/*/!*</ul>*!/*/}
       </div>
     </QuestionTop>
   );
@@ -38,18 +42,16 @@ const QuestionTop = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
-    ul{
+    button{
       width: 80%;
-      li{
-        margin-top: 5%;
-        padding: 3%;
-      }
-      .a-answer{
-        background-color: antiquewhite;
-      }
-      .b-answer{
-        background-color: mediumaquamarine;
-      }
+      margin-top: 5%;
+      padding: 2%;
+    }
+    .a-answer{
+      background-color: antiquewhite;
+    }
+    .b-answer{
+      background-color: mediumaquamarine;
     }
   }
   `;
