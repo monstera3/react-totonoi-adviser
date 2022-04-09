@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import hereImg from "../assets/images/hero.png"
+import heroImg from "../assets/images/hero.png"
 import question1Img from "../assets/images/question1.png"
 import {useState} from "react";
 import {QuestionNo1} from "./content/QuestionNo1";
@@ -28,7 +28,7 @@ export const Content = () =>{
 const ContentImg = (questionFlag) => {
   switch (questionFlag) {
     case true:
-      return hereImg;
+      return heroImg;
     case false:
       return question1Img;
     default:
