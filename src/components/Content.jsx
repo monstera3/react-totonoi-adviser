@@ -2,6 +2,7 @@ import styled from "styled-components";
 import hereImg from "../assets/images/hero.png"
 import {useState} from "react";
 import {QuestionNo1} from "./content/QuestionNo1";
+import {QuestionStart} from "./content/QuestionStart";
 
 export const Content = () =>{
 
@@ -14,7 +15,7 @@ export const Content = () =>{
   const ContentTopAndButton = () => {
     return (
       <ContentTop>
-        <button onClick={onClickSwitchQuestionFlag}>診断 START</button>
+        <QuestionStart onClick={onClickSwitchQuestionFlag} />
       </ContentTop>
     )
   }
