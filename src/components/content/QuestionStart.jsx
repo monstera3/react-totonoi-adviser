@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const QuestionStart = (props) =>{
-
+  console.log("QuestionStart")
   return(
     <QuestionStartStyle>
       <div>
