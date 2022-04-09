@@ -24,6 +24,8 @@ const QuestionTop = styled.div`
   text-align: center;
   background: rgba(255,255,255,0.8);
   width: 700px;
+  height: 50%;
+  margin-top: 20%;
   .question-number{
     font-size: 1rem;
     display: flex;
@@ -35,9 +37,11 @@ const QuestionTop = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
     ul{
       width: 80%;
       li{
+        margin-top: 5%;
         padding: 3%;
       }
       .a-answer{
