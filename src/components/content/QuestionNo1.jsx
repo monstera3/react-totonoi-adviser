@@ -22,30 +22,24 @@ export const QuestionNo1 = () =>{
 };
 
 const QuestionTop = styled.div`
-  margin: 0 auto;
-  font-size: 1.7rem;
-  min-height: 700px;
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   .question-number{
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
-    
   }
   .question-content{
     text-align: center;
     background: rgba(255,255,255,0.8);
-    width: 900px;
-    p{
-      margin: 3% 18%;
-      padding: 4%;
-      //background-color: lightblue;
-    }
+    width: 700px;
+   
     ul{
       li{
-        margin: 3% 18%;
-        padding: 4%;
+        //margin: 3% 18%;
+        //padding: 1%;
       }
       .a-answer{
         background-color: antiquewhite;
