@@ -12,11 +12,6 @@ export const Question = () =>{
         <p>1.今はどんな気分？</p>
         <button className="a-answer">A.わくわく、うきうき</button>
         <button className="b-answer">B.不安、落ち込み気味</button>
-
-        {/*<ul>*/}
-        {/*  <li className="a-answer"><button >A.わくわく、うきうき</button></li>*/}
-        {/*  <li className="b-answer"><button >B.不安、落ち込み気味</button></li>*/}
-        {/*/!*</ul>*!/*/}
       </div>
     </QuestionTop>
   );
