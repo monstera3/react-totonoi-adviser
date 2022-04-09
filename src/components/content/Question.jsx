@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import {useState} from "react";
 
 export const Question = () =>{
+  const [beforeAnswer,setBeforeAnswer] = useState(0);
+  const [answer,setAnswer] = useState(0);
+  const [afterAnswer,setAfterAnswer] = useState(0);
+  const onClickA = () => alert();
 
   return(
     <QuestionTop>
@@ -10,7 +15,7 @@ export const Question = () =>{
       </div>
       <div className="question">
         <p>1.今はどんな気分？</p>
-        <button className="a-answer">A.わくわく、うきうき</button>
+        <button onClick={onClickA} className="a-answer">A.わくわく、うきうき</button>
         <button className="b-answer">B.不安、落ち込み気味</button>
       </div>
     </QuestionTop>
