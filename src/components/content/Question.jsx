@@ -10,7 +10,6 @@ export const Question = () =>{
       </div>
       <div className="question">
         <p>1.今はどんな気分？</p>
-
         <button className="a-answer">A.わくわく、うきうき</button>
         <button className="b-answer">B.不安、落ち込み気味</button>
 
@@ -43,15 +42,16 @@ const QuestionTop = styled.div`
     align-items: center;
     margin-top: 5%;
     button{
+      color: white;
       width: 80%;
       margin-top: 5%;
       padding: 2%;
     }
     .a-answer{
-      background-color: antiquewhite;
+      background-color: #D6BCBB;
     }
     .b-answer{
-      background-color: mediumaquamarine;
+      background-color: #66AFAB;
     }
   }
   `;
