@@ -15,7 +15,7 @@ export const Content = () =>{
 
   const ContentTopAndButton = () => {
     return (
-      <ContentStyle img={ContentImg(questionFlag)}>
+      <ContentStyle backgroundImg={ContentImg(questionFlag)}>
         {questionFlag
           ? <QuestionStart onClick={onClickSwitchQuestionFlag} />
           : <QuestionNo1 />
@@ -44,7 +44,7 @@ const ContentImg = (questionFlag) => {
 }
 
 const ContentStyle =  styled.div`
-  background: url(${props => props.img}) no-repeat center /cover;
+  background: url(${props => props.backgroundImg}) no-repeat center /cover;
   min-height: 700px;
   display: flex;
   justify-content: center;
