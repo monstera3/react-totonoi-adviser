@@ -49,6 +49,8 @@ const ContentImg = (process) => {
       return heroImg;
     case "in_progress":
       return question1Img;
+    case "finished":
+      return null;
     default:
       return null;
   }
