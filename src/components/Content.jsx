@@ -14,9 +14,9 @@ export const Content = () =>{
 
   const ContentTopAndButton = () => {
     return (
-      <ContentTop>
+      <ContentStyle>
         <QuestionStart onClick={onClickSwitchQuestionFlag} />
-      </ContentTop>
+      </ContentStyle>
     )
   }
 
@@ -31,7 +31,7 @@ export const Content = () =>{
   );
 };
 
-const ContentTop = styled.div`
+const ContentStyle = styled.div`
   background: url(${hereImg}) no-repeat center /cover;
   min-height: 700px;
   display: flex;
