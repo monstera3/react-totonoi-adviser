@@ -15,17 +15,17 @@ export const Content = () =>{
   const ContentTopAndButton = () => {
     return (
       <ContentStyle>
-        <QuestionStart onClick={onClickSwitchQuestionFlag} />
+        {questionFlag
+          ? <QuestionStart onClick={onClickSwitchQuestionFlag} />
+          : <QuestionNo1 />
+        }
       </ContentStyle>
     )
   }
 
   return(
     <div>
-      {questionFlag
-        ? ContentTopAndButton()
-        : <QuestionNo1 />
-      }
+      {ContentTopAndButton()}
     </div>
 
   );
