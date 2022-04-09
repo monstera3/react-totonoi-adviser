@@ -37,17 +37,15 @@ const QuestionTop = styled.div`
   .question-image{
     background: url(${question1Img}) no-repeat center /cover;
     height: 950px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .question-content{
     text-align: center;
     background: rgba(255,255,255,0.8);
     width: 900px;
     height: 500px;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     p{
       margin: 3% 18%;
       padding: 4%;
