@@ -21,9 +21,6 @@ export const Footer = () =>{
 };
 
 const FooterTop = styled.div`
-  max-width: 1440px;
-  margin: 0 auto;
-  //background-color: lightblue;
   .info{
     display: flex;
     justify-content: space-between;
@@ -40,7 +37,6 @@ const FooterTop = styled.div`
       }
     }
   }
-  
   .copy{
     text-align: center;
     background-color: darkgray;
