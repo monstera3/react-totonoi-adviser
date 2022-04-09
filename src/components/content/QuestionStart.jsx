@@ -26,7 +26,7 @@ const QuestionStartStyle = styled.div`
     font-size: 2rem;
   }
   button{
-    padding:3% 10%;
+    padding:5%;
     color: #666;
     background-color: white;
     font-size: 24px;
