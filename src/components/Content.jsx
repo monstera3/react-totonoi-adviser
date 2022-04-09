@@ -35,9 +35,8 @@ export const Content = () =>{
   return(
     <div>
       <ContentStyle backgroundImg={ContentImg(process)}>
-        {ContentBody(process,startQuestion)}
+        {ContentBody(process,startQuestion, answerQuestion)}
       </ContentStyle>
-      <Result />
     </div>
   );
 };
@@ -55,13 +54,13 @@ const ContentImg = (process) => {
   }
 }
 
-const ContentBody = (process, startQuestion) =>{
+const ContentBody = (process, startQuestion, answerQuestion) =>{
   console.log("ContentBody")
   switch (process) {
     case "not_started":
       return (<QuestionStart onClick={startQuestion} />)
     case "in_progress":
-      return (<Question />)
+      return (<Question answerQuestion={answerQuestion} />)
     case "finished":
       return (<Result />)
     default:
