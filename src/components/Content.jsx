@@ -9,6 +9,7 @@ import {Result} from "./content/Result";
 export const Content = () =>{
   console.log("Content")
 
+  const QUESTION_COUNT = 1;
   const [process,setProcess] = useState('not_started'); // 'in_progress', 'finished'
   const [question,setQuestion] = useState(0); // 1, 2, 3
   const [answer,setAnswer] = useState([]); // ['a', 'b', 'c', 'a']
@@ -18,6 +19,18 @@ export const Content = () =>{
     setQuestion(1);
     console.log("startQuestion")
   };
+
+  const answerQuestion = (newAnswer) => {
+    setAnswer([...answer, newAnswer]);
+    setQuestion(prevState => {
+      if (prevState === QUESTION_COUNT) {
+        setProcess('finished');
+        return 0;
+      } else {
+        return prevState + 1;
+      }
+    });
+  }
 
   return(
     <div>
