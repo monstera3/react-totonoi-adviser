@@ -5,12 +5,12 @@ export const QuestionNo1 = () =>{
 
   return(
     <QuestionTop>
-      <div className="question-number">
-        <p>・・・</p>
-        <p>3/5</p>
-      </div>
       <div className="question-image">
         <div className="question-content">
+          <div className="question-number">
+            <p>・・・</p>
+            <p>3/5</p>
+          </div>
           <p>1.今はどんな気分？</p>
           <ul>
             <a href="https://www.google.com"><li className="a-answer">A.わくわく、うきうき</li></a>
@@ -45,7 +45,6 @@ const QuestionTop = styled.div`
     text-align: center;
     background: rgba(255,255,255,0.8);
     width: 900px;
-    height: 500px;
     p{
       margin: 3% 18%;
       padding: 4%;
