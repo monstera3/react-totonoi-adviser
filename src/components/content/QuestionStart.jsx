@@ -4,8 +4,10 @@ export const QuestionStart = (props) =>{
 
   return(
     <QuestionStartStyle>
-      <p className="title">totonoi</p>
-      <p className="catch-copy">自律神経を整える</p>
+      <div>
+        <div className="title">totonoi</div>
+        <div className="catch-copy">自律神経を整える</div>
+      </div>
       <button onClick={props.onClick}>診断 START</button>
     </QuestionStartStyle>
   );
@@ -13,6 +15,10 @@ export const QuestionStart = (props) =>{
 
 const QuestionStartStyle = styled.div`
   text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .title{
     color: white;
   }
@@ -20,7 +26,7 @@ const QuestionStartStyle = styled.div`
     font-size: 2rem;
   }
   button{
-    padding:1% 3%;
+    padding:3% 10%;
     color: #666;
     background-color: white;
     font-size: 24px;

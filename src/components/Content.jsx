@@ -38,7 +38,7 @@ const ContentImg = (questionFlag) => {
 
 const ContentStyle =  styled.div`
   background: url(${props => props.backgroundImg}) no-repeat center /cover;
-  min-height: 700px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
