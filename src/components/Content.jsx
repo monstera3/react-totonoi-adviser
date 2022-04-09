@@ -36,7 +36,6 @@ const ContentTop = styled.div`
   position: relative;
   max-width: 1440px;
   min-height: 700px;
-  z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +47,6 @@ const ContentTop = styled.div`
     font-size: 24px;
     border-radius: 50px;
     border:none;
-    z-index:1;
     :hover{
      background-color: #666; 
       color: white;
