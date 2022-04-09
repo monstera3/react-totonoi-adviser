@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const QuestionNo1 = () =>{
+export const Question = () =>{
 
   return(
     <QuestionTop>

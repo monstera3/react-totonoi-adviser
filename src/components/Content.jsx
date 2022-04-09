@@ -2,7 +2,7 @@ import styled from "styled-components";
 import heroImg from "../assets/images/hero.png"
 import question1Img from "../assets/images/question1.png"
 import {useState} from "react";
-import {QuestionNo1} from "./content/QuestionNo1";
+import {Question} from "./content/Question";
 import {QuestionStart} from "./content/QuestionStart";
 
 export const Content = () =>{
@@ -18,7 +18,7 @@ export const Content = () =>{
       <ContentStyle backgroundImg={ContentImg(questionFlag)}>
         {questionFlag
           ? <QuestionStart onClick={onClickSwitchQuestionFlag} />
-          : <QuestionNo1 />
+          : <Question />
         }
       </ContentStyle>
     </div>
