@@ -37,12 +37,11 @@ const ContentTop = styled.div`
   max-width: 1440px;
   min-height: 700px;
   z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   button{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     padding:1% 3%;
     color: #666;
     background-color: white;
