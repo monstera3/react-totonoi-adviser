@@ -32,8 +32,6 @@ export const Content = () =>{
 
 const ContentTop = styled.div`
   background: url(${hereImg}) no-repeat center /cover;
-  margin: 0 auto;
-  position: relative;
   max-width: 1440px;
   min-height: 700px;
   display: flex;
