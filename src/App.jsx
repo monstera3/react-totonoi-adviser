@@ -20,7 +20,8 @@ const GlobalStyle = createGlobalStyle`
   #root {
     font-family: 'Noto Sans JP', sans-serif;
     color: #666;
-    
+    max-width: 1200px;
+    margin: 0 auto;
   }
   #root li{
     list-style: none;
