@@ -9,52 +9,72 @@ import {Result} from "./content/Result";
 export const Content = () =>{
   console.log("Content")
 
+  const QUESTION_TOTAL_COUNT = 1;
+  // NOTE: process: 進行状況
+  // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
   const [process,setProcess] = useState('not_started'); // 'in_progress', 'finished'
-  const [question,setQuestion] = useState(0); // 1, 2, 3
-  const [answer,setAnswer] = useState([]); // ['a', 'b', 'c', 'a']
+  // NOTE: currentQuestionNumber: 現在の質問番号
+  const [currentQuestionNumber,setCurrentQuestionNumber] = useState(0); // 1, 2, 3
+  // NOTE: answerHistory: ユーザーの回答履歴
+  const [answerHistory,setAnswerHistory] = useState([]); // ['A', 'B', 'A', 'A']
 
   const startQuestion = () => {
     setProcess( 'in_progress');
-    setQuestion(1);
+    setCurrentQuestionNumber(1);
     console.log("startQuestion")
+  };
+
+  const answerQuestion = (newAnswer) => {
+    // NOTE: ユーザーの回答をanswerHistoryに追加
+    setAnswerHistory([...answerHistory, newAnswer]);
+    // NOTE: 質問番号を次に進める
+    setCurrentQuestionNumber(prevState => {
+      if (prevState === QUESTION_TOTAL_COUNT) { // NOTE: 最後の質問に到達した場合
+        setProcess('finished');
+        return 0;
+      } else { // NOTE: まだ質問が残っている場合
+        return prevState + 1;
+      }
+    });
+  }
+
+  const ContentImg = () => {
+    console.log("ContentImg")
+    switch (process) {
+      case "not_started":
+        return heroImg;
+      case "in_progress":
+        return question1Img;
+      case "finished":
+        return null;
+      default:
+        return null;
+    }
+  }
+
+  const ContentBody = () =>{
+    console.log("ContentBody")
+    switch (process) {
+      case "not_started":
+        return (<QuestionStart startQuestion={startQuestion} />)
+      case "in_progress":
+        return (<Question answerQuestion={answerQuestion} />)
+      case "finished":
+        return (<Result />)
+      default:
+        return null;
+    }
   };
 
   return(
     <div>
-      <ContentStyle backgroundImg={ContentImg(process)}>
-        {ContentBody(process,startQuestion)}
+      <ContentStyle backgroundImg={ContentImg()}>
+        {ContentBody()}
       </ContentStyle>
-      <Result />
     </div>
   );
 };
 
-
-const ContentImg = (process) => {
-  console.log("ContentImg")
-  switch (process) {
-    case "not_started":
-      return heroImg;
-    case "in_progress":
-      return question1Img;
-    default:
-      return null;
-  }
-}
-
-const ContentBody = (process, startQuestion) =>{
-  console.log("ContentBody")
-  switch (process) {
-    case "not_started":
-      return (<QuestionStart onClick={startQuestion} />)
-    case "in_progress":
-      return (<Question />)
-    case "finished":
-      return (<Result />)
-    default:
-      return null;
-  }
-};
 
 const ContentStyle =  styled.div`
   background: url(${props => props.backgroundImg}) no-repeat top /cover;

@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-export const Question = () =>{
-  const onClickA = () => alert("A");
-  const onClickB = () => alert("B");
-  console.log("QuestionAB")
-
+export const Question = (props) =>{
 
   return(
     <QuestionTop>
@@ -14,8 +10,8 @@ export const Question = () =>{
       </div>
       <div className="question">
         <p>1.今はどんな気分？</p>
-        <button onClick={onClickA} className="a-answer">A.わくわく、うきうき</button>
-        <button onClick={onClickB} className="b-answer">B.不安、落ち込み気味</button>
+        <button onClick={() => props.answerQuestion('A')} className="a-answer">A.わくわく、うきうき</button>
+        <button onClick={() => props.answerQuestion('B')} className="b-answer">B.不安、落ち込み気味</button>
       </div>
     </QuestionTop>
   );
