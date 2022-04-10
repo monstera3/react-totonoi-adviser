@@ -27,6 +27,7 @@ export const Content = () =>{
   const answerQuestion = (newAnswer) => {
     // NOTE: ユーザーの回答をanswerHistoryに追加
     setAnswerHistory([...answerHistory, newAnswer]);
+    // NOTE: 質問番号を次に進める
     setQuestionNumber(prevState => {
       if (prevState === QUESTION_COUNT) {
         setProcess('finished');
