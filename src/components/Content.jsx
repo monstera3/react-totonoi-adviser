@@ -29,10 +29,10 @@ export const Content = () =>{
     setAnswerHistory([...answerHistory, newAnswer]);
     // NOTE: 質問番号を次に進める
     setCurrentQuestionNumber(prevState => {
-      if (prevState === QUESTION_TOTAL_COUNT) {
+      if (prevState === QUESTION_TOTAL_COUNT) { // NOTE: 最後の質問に到達した場合
         setProcess('finished');
         return 0;
-      } else {
+      } else { // NOTE: まだ質問が残っている場合
         return prevState + 1;
       }
     });
