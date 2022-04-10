@@ -32,6 +32,34 @@ export const Content = () =>{
     });
   }
 
+  const ContentImg = (process) => {
+    console.log("ContentImg")
+    switch (process) {
+      case "not_started":
+        return heroImg;
+      case "in_progress":
+        return question1Img;
+      case "finished":
+        return null;
+      default:
+        return null;
+    }
+  }
+
+  const ContentBody = (process, startQuestion, answerQuestion) =>{
+    console.log("ContentBody")
+    switch (process) {
+      case "not_started":
+        return (<QuestionStart onClick={startQuestion} />)
+      case "in_progress":
+        return (<Question answerQuestion={answerQuestion} />)
+      case "finished":
+        return (<Result />)
+      default:
+        return null;
+    }
+  };
+
   return(
     <div>
       <ContentStyle backgroundImg={ContentImg(process)}>
@@ -41,34 +69,6 @@ export const Content = () =>{
   );
 };
 
-
-const ContentImg = (process) => {
-  console.log("ContentImg")
-  switch (process) {
-    case "not_started":
-      return heroImg;
-    case "in_progress":
-      return question1Img;
-    case "finished":
-      return null;
-    default:
-      return null;
-  }
-}
-
-const ContentBody = (process, startQuestion, answerQuestion) =>{
-  console.log("ContentBody")
-  switch (process) {
-    case "not_started":
-      return (<QuestionStart onClick={startQuestion} />)
-    case "in_progress":
-      return (<Question answerQuestion={answerQuestion} />)
-    case "finished":
-      return (<Result />)
-    default:
-      return null;
-  }
-};
 
 const ContentStyle =  styled.div`
   background: url(${props => props.backgroundImg}) no-repeat top /cover;
