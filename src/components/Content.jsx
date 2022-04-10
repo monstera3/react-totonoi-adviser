@@ -52,6 +52,14 @@ export const Content = () =>{
     }
   }
 
+  const resultText = () => {
+  //  TODO: answerHistoryの内容によって結果の文章を返す
+  //  hint:
+  //  - switch文を使う
+  //  - titleとbodyを返す
+  //  - イメージ -> return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト' }
+  }
+
   const ContentBody = () =>{
     console.log("ContentBody")
     switch (process) {
@@ -60,7 +68,7 @@ export const Content = () =>{
       case "in_progress":
         return (<Question answerQuestion={answerQuestion} />)
       case "finished":
-        return (<Result />)
+        return (<Result text={resultText}/>)
       default:
         return null;
     }
