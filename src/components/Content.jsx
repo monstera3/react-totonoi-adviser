@@ -53,7 +53,7 @@ export const Content = () =>{
   }
 
   const resultText = () => {
-  //  TODO: answerHistoryの内容によって結果の文章を返す
+  //  TODO: 1. answerHistoryの内容によって結果の文章を返す
   //  hint:
   //  - switch文を使う
   //  - titleとbodyを返す
