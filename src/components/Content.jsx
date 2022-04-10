@@ -15,8 +15,8 @@ export const Content = () =>{
   const [process,setProcess] = useState('not_started'); // 'in_progress', 'finished'
   // NOTE: questionNumber: 現在の質問番号
   const [questionNumber,setQuestionNumber] = useState(0); // 1, 2, 3
-  // NOTE: answer: ユーザーの回答履歴
-  const [answer,setAnswer] = useState([]); // ['A', 'B', 'A', 'A']
+  // NOTE: answerHistory: ユーザーの回答履歴
+  const [answerHistory,setAnswerHistory] = useState([]); // ['A', 'B', 'A', 'A']
 
   const startQuestion = () => {
     setProcess( 'in_progress');
@@ -26,7 +26,7 @@ export const Content = () =>{
 
   const answerQuestion = (newAnswer) => {
     // NOTE: ユーザーの回答をanswerに追加
-    setAnswer([...answer, newAnswer]);
+    setAnswerHistory([...answerHistory, newAnswer]);
     setQuestionNumber(prevState => {
       if (prevState === QUESTION_COUNT) {
         setProcess('finished');
