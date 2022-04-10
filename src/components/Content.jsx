@@ -25,6 +25,7 @@ export const Content = () =>{
   };
 
   const answerQuestion = (newAnswer) => {
+    // NOTE: ユーザーの回答をanswerに追加
     setAnswer([...answer, newAnswer]);
     setQuestionNumber(prevState => {
       if (prevState === QUESTION_COUNT) {
