@@ -54,7 +54,7 @@ export const Content = () =>{
     console.log("ContentBody")
     switch (process) {
       case "not_started":
-        return (<QuestionStart onClick={startQuestion} />)
+        return (<QuestionStart startQuestion={startQuestion} />)
       case "in_progress":
         return (<Question answerQuestion={answerQuestion} />)
       case "finished":

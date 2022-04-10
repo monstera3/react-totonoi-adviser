@@ -8,7 +8,7 @@ export const QuestionStart = (props) =>{
         <div className="title">totonoi</div>
         <div className="catch-copy">自律神経を整える</div>
       </div>
-      <button onClick={props.onClick}>診断 START</button>
+      <button onClick={props.startQuestion}>診断 START</button>
     </QuestionStartStyle>
   );
 };
