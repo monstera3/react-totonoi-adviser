@@ -46,7 +46,7 @@ export const Content = () =>{
     }
   }
 
-  const ContentBody = (process, startQuestion, answerQuestion) =>{
+  const ContentBody = () =>{
     console.log("ContentBody")
     switch (process) {
       case "not_started":
@@ -63,7 +63,7 @@ export const Content = () =>{
   return(
     <div>
       <ContentStyle backgroundImg={ContentImg()}>
-        {ContentBody(process,startQuestion, answerQuestion)}
+        {ContentBody()}
       </ContentStyle>
     </div>
   );
