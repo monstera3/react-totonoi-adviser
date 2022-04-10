@@ -9,7 +9,7 @@ import {Result} from "./content/Result";
 export const Content = () =>{
   console.log("Content")
 
-  const QUESTION_COUNT = 1;
+  const QUESTION_TOTAL_COUNT = 1;
   // NOTE: process: 進行状況
   // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
   const [process,setProcess] = useState('not_started'); // 'in_progress', 'finished'
@@ -29,7 +29,7 @@ export const Content = () =>{
     setAnswerHistory([...answerHistory, newAnswer]);
     // NOTE: 質問番号を次に進める
     setQuestionNumber(prevState => {
-      if (prevState === QUESTION_COUNT) {
+      if (prevState === QUESTION_TOTAL_COUNT) {
         setProcess('finished');
         return 0;
       } else {
