@@ -13,14 +13,14 @@ export const Content = () =>{
   // NOTE: process: 進行状況
   // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
   const [process,setProcess] = useState('not_started'); // 'in_progress', 'finished'
-  // NOTE: questionNumber: 現在の質問番号
-  const [questionNumber,setQuestionNumber] = useState(0); // 1, 2, 3
+  // NOTE: currentQuestionNumber: 現在の質問番号
+  const [currentQuestionNumber,setCurrentQuestionNumber] = useState(0); // 1, 2, 3
   // NOTE: answerHistory: ユーザーの回答履歴
   const [answerHistory,setAnswerHistory] = useState([]); // ['A', 'B', 'A', 'A']
 
   const startQuestion = () => {
     setProcess( 'in_progress');
-    setQuestionNumber(1);
+    setCurrentQuestionNumber(1);
     console.log("startQuestion")
   };
 
@@ -28,7 +28,7 @@ export const Content = () =>{
     // NOTE: ユーザーの回答をanswerHistoryに追加
     setAnswerHistory([...answerHistory, newAnswer]);
     // NOTE: 質問番号を次に進める
-    setQuestionNumber(prevState => {
+    setCurrentQuestionNumber(prevState => {
       if (prevState === QUESTION_TOTAL_COUNT) {
         setProcess('finished');
         return 0;
