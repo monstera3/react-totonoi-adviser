@@ -18,7 +18,7 @@ export const Content = () =>{
     {question: '天気は？', options: [{ A: '晴れ' }, { B: '曇り/雨' }] },
     {question: '年齢は？', options: [{ A: '20代' }, { B: '30代以上' }] },
   ]
-  // - [ ] Questionコンポーネントのpropsにquestionを渡す
+  // - [x] Questionコンポーネントのpropsにquestionを渡す
   // - [ ] Questionコンポーネントでprops.questionから受け取ったquestionを表示する
   const QUESTION_TOTAL_COUNT = 3;
   // NOTE: process: 進行状況
@@ -100,7 +100,7 @@ export const Content = () =>{
       case "not_started":
         return (<QuestionStart startQuestion={startQuestion} />)
       case "in_progress":
-        return (<Question answerQuestion={answerQuestion} />)
+        return (<Question answerQuestion={answerQuestion} question={QUESTION_LIST[currentQuestionNumber-1]} />)
       case "finished":
         return (<Result text={resultText()}/>)
       default:
