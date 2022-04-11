@@ -27,6 +27,7 @@ export const Content = () =>{
   const [currentQuestionNumber,setCurrentQuestionNumber] = useState(0); // 1, 2, 3
   // NOTE: answerHistory: ユーザーの回答履歴
   const [answerHistory,setAnswerHistory] = useState([]); // ['A', 'B', 'A', 'A']
+  console.log(answerHistory)
 
   const startQuestion = () => {
     setProcess( 'in_progress');

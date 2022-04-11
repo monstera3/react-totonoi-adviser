@@ -4,6 +4,7 @@ import resultImg from "../../assets/images/resultImg.png"
 export const Result = (props) =>{
   console.log("Result")
   console.log(props)
+
   return(
     <ResultStyle>
       <div className="result-content">
