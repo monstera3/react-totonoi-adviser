@@ -9,6 +9,16 @@ import {Result} from "./content/Result";
 export const Content = () =>{
   console.log("Content")
 
+  // TODO: 4. 複数の問題に対応する
+  // - QUESTION_TOTAL_COUNTを3などに設定する
+  // - QUESTION_LISTを作成する
+  // -> (イメージ)
+  // const QUESTION_LIST = [
+  //   {question: 'aaa', options: [{ A: 'わくわく、うきうき' }, { B: '不安、落ち込み気味' }] },
+  //   {question: 'aaa', options: [{ A: 'わくわく、うきうき' }, { B: '不安、落ち込み気味' }] },
+  // ]
+  // - Questionコンポーネントのpropsにquestionを渡す
+  // - Questionコンポーネントでprops.questionから受け取ったquestionを表示する
   const QUESTION_TOTAL_COUNT = 1;
   // NOTE: process: 進行状況
   // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
