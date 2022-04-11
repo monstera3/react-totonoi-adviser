@@ -5,6 +5,7 @@ import {useState} from "react";
 import {Question} from "./content/Question";
 import {QuestionStart} from "./content/QuestionStart";
 import {Result} from "./content/Result";
+import {RESULT_TEXTS} from "./content/REUSLT_TEXTS";
 
 export const Content = () =>{
   console.log("Content")
@@ -68,25 +69,16 @@ export const Content = () =>{
 
   const resultText = () => {
     //  NOTE: answerHistoryの内容によって結果の文章を返す
+    //  NOTE: 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
     console.log("resultText")
     console.log(answerHistory);
     const answerHistoryString = answerHistory.join('');
-    const result = RESULT_TEXTS[answerHistoryString];
+    const currentMonthIndex = new Date().getMonth();
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const currentMonthName = monthNames[currentMonthIndex];
+    const result = RESULT_TEXTS[currentMonthName][answerHistoryString];
     return { title: result.title, body: result.body };
-  //  TODO: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
   };
-
-  const RESULT_TEXTS = {
-    AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-    AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-    ABA: { title: 'ABA title', body: 'ABA body' },
-    ABB: { title: 'ABB title', body: 'ABB body' },
-    BAA: { title: 'BAA title', body: 'BAA body' },
-    BAB: { title: 'BAB title', body: 'BAB body' },
-    BBA: { title: 'BBA title', body: 'BBA body' },
-    BBB: { title: 'BBB title', body: 'BBB body' },
-  }
-
 
   const ContentBody = () =>{
     console.log("ContentBody")
