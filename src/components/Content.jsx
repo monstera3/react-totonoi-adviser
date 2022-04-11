@@ -5,6 +5,7 @@ import {useState} from "react";
 import {Question} from "./content/Question";
 import {QuestionStart} from "./content/QuestionStart";
 import {Result} from "./content/Result";
+import {RESULT_TEXTS} from "./content/REUSLT_TEXTS";
 
 export const Content = () =>{
   console.log("Content")
@@ -78,129 +79,6 @@ export const Content = () =>{
     const result = RESULT_TEXTS[currentMonthName][answerHistoryString];
     return { title: result.title, body: result.body };
   };
-
-  const RESULT_TEXTS = {
-    January: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    February: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    March: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    April: {
-      AAA: { title: '4月「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    May: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    June: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    July: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    August: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    September: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    October: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    November: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    December: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-  }
 
   const ContentBody = () =>{
     console.log("ContentBody")
