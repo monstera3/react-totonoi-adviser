@@ -68,16 +68,19 @@ export const Content = () =>{
 
   const resultText = () => {
     //  NOTE: answerHistoryの内容によって結果の文章を返す
+    //  NOTE: 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
     console.log("resultText")
     console.log(answerHistory);
     const answerHistoryString = answerHistory.join('');
-    const result = RESULT_TEXTS[answerHistoryString];
+    const currentMonthIndex = new Date().getMonth();
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const currentMonthName = monthNames[currentMonthIndex];
+    const result = RESULT_TEXTS[currentMonthName][answerHistoryString];
     return { title: result.title, body: result.body };
-  //  TODO: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
   };
 
   const RESULT_TEXTS = {
-    january: {
+    January: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -87,7 +90,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    february: {
+    February: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -97,7 +100,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    march: {
+    March: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -107,7 +110,17 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    april: {
+    April: {
+      AAA: { title: '4月「座っている時間」をできるだけ短くする', body: '説明テキスト' },
+      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
+      ABA: { title: 'ABA title', body: 'ABA body' },
+      ABB: { title: 'ABB title', body: 'ABB body' },
+      BAA: { title: 'BAA title', body: 'BAA body' },
+      BAB: { title: 'BAB title', body: 'BAB body' },
+      BBA: { title: 'BBA title', body: 'BBA body' },
+      BBB: { title: 'BBB title', body: 'BBB body' },
+    },
+    May: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -117,7 +130,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    may: {
+    June: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -127,7 +140,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    june: {
+    July: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -137,7 +150,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    july: {
+    August: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -147,7 +160,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    august: {
+    September: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -157,7 +170,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    september: {
+    October: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -167,7 +180,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    october: {
+    November: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
@@ -177,17 +190,7 @@ export const Content = () =>{
       BBA: { title: 'BBA title', body: 'BBA body' },
       BBB: { title: 'BBB title', body: 'BBB body' },
     },
-    november: {
-      AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-      AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-      ABA: { title: 'ABA title', body: 'ABA body' },
-      ABB: { title: 'ABB title', body: 'ABB body' },
-      BAA: { title: 'BAA title', body: 'BAA body' },
-      BAB: { title: 'BAB title', body: 'BAB body' },
-      BBA: { title: 'BBA title', body: 'BBA body' },
-      BBB: { title: 'BBB title', body: 'BBB body' },
-    },
-    december: {
+    December: {
       AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
       AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
       ABA: { title: 'ABA title', body: 'ABA body' },
