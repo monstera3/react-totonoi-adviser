@@ -81,6 +81,18 @@ export const Content = () =>{
   //  TODO: 3. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
   };
 
+  const RESULT_TEXTS = {
+    AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
+    AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
+    ABA: { title: 'aa', body: 'bb' },
+    ABB: { title: 'aa', body: 'bb' },
+    BAA: { title: 'aa', body: 'bb' },
+    BAB: { title: 'aa', body: 'bb' },
+    BBA: { title: 'aa', body: 'bb' },
+    BBB: { title: 'aa', body: 'bb' },
+  }
+
+
   const ContentBody = () =>{
     console.log("ContentBody")
     switch (process) {
