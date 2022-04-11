@@ -69,9 +69,20 @@ export const Content = () =>{
   //  - switch文を使う
   //  - titleとbodyを返す
   //  - イメージ -> return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト' }
+    console.log("resultText")
+    switch (process) {
+      case ['A']:
+        return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' }
+      case ['B']:
+        return { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' }
+      case ['A', 'B', 'A']:
+        return { title: '「座っている時間」をできるだけ短くするC', body: '説明テキストC' }
+      default:
+        return null;
+    }
 
   //  TODO: 3. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
-  }
+  };
 
   const ContentBody = () =>{
     console.log("ContentBody")
