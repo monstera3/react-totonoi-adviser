@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Question = (props) =>{
-
+  console.log("Question")
   return(
     <QuestionTop>
       <div className="question-number">
