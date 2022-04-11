@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import resultImg from "../../assets/images/resultImg.png"
 
-export const Result = () =>{
+export const Result = (props) =>{
   console.log("Result")
   return(
     <ResultStyle>
@@ -9,9 +9,10 @@ export const Result = () =>{
         <h2>today’s   totonoi   point</h2>
         <div className="text-content">
           {/* TODO: 2. props.textからtitleとbodyを取得して表示する */}
-          <h3>「座っている時間」を<br/>
-            できるだけ短くする</h3>
-          <p>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</p>
+
+
+          <h3>{props.text.title}</h3>
+          <p>{props.text.body}</p>
 
         </div>
         {/*<img src={resultImg} alt=""/>*/}

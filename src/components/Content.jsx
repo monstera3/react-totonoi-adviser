@@ -92,7 +92,7 @@ export const Content = () =>{
       case "in_progress":
         return (<Question answerQuestion={answerQuestion} />)
       case "finished":
-        return (<Result text={resultText}/>)
+        return (<Result text={resultText()}/>)
       default:
         return null;
     }
