@@ -71,10 +71,10 @@ export const Content = () =>{
   //  - titleとbodyを返す
   //  - イメージ -> return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト' }
     console.log("resultText")
-    switch (answerHistory) {
-      case ['A']:
+    switch (answerHistory[0]) {
+      case 'A':
         return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' }
-      case ['B']:
+      case 'B':
         return { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' }
       case ['A', 'B', 'A']:
         return { title: '「座っている時間」をできるだけ短くするC', body: '説明テキストC' }
@@ -93,7 +93,7 @@ export const Content = () =>{
       case "in_progress":
         return (<Question answerQuestion={answerQuestion} />)
       case "finished":
-        return (<Result text={resultText}/>)
+        return (<Result text={resultText()}/>)
       default:
         return null;
     }
