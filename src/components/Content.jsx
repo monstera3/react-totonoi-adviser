@@ -10,16 +10,16 @@ export const Content = () =>{
   console.log("Content")
 
   // TODO: 3. 複数の問題に対応する
-  // - QUESTION_TOTAL_COUNTを3などに設定する
-  // - QUESTION_LISTを作成する
+  // - [x] QUESTION_TOTAL_COUNTを3などに設定する
+  // - [x] QUESTION_LISTを作成する
   // -> (イメージ)
   const QUESTION_LIST = [
     {question: 'どんな気分？', options: [{ A: 'わくわく、うきうき' }, { B: '不安、落ち込み気味' }] },
     {question: '天気は？', options: [{ A: '晴れ' }, { B: '曇り/雨' }] },
     {question: '年齢は？', options: [{ A: '20代' }, { B: '30代以上' }] },
   ]
-  // - Questionコンポーネントのpropsにquestionを渡す
-  // - Questionコンポーネントでprops.questionから受け取ったquestionを表示する
+  // - [ ] Questionコンポーネントのpropsにquestionを渡す
+  // - [ ] Questionコンポーネントでprops.questionから受け取ったquestionを表示する
   const QUESTION_TOTAL_COUNT = 3;
   // NOTE: process: 進行状況
   // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
