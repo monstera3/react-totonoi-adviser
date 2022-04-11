@@ -9,7 +9,7 @@ import {Result} from "./content/Result";
 export const Content = () =>{
   console.log("Content")
 
-  // TODO: 3. 複数の問題に対応する
+  // NOTE: 複数の問題に対応する
   // - [x] QUESTION_TOTAL_COUNTを3などに設定する
   // - [x] QUESTION_LISTを作成する
   // -> (イメージ)
