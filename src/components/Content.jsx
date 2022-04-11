@@ -9,7 +9,7 @@ import {Result} from "./content/Result";
 export const Content = () =>{
   console.log("Content")
 
-  // TODO: 4. 複数の問題に対応する
+  // TODO: 3. 複数の問題に対応する
   // - QUESTION_TOTAL_COUNTを3などに設定する
   // - QUESTION_LISTを作成する
   // -> (イメージ)
@@ -78,7 +78,7 @@ export const Content = () =>{
         return null;
     }
 
-  //  TODO: 3. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
+  //  TODO: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
   };
 
   const RESULT_TEXTS = {
