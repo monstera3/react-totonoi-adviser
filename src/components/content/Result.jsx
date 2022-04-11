@@ -3,6 +3,7 @@ import resultImg from "../../assets/images/resultImg.png"
 
 export const Result = (props) =>{
   console.log("Result")
+  console.log(props)
   return(
     <ResultStyle>
       <div className="result-content">
@@ -11,7 +12,7 @@ export const Result = (props) =>{
           {/* TODO: 2. props.textからtitleとbodyを取得して表示する */}
 
 
-          <h3>{props.text.title}</h3>
+          <h3 >{props.text.title}</h3>
           <p>{props.text.body}</p>
 
         </div>

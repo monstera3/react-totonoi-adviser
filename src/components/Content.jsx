@@ -70,7 +70,7 @@ export const Content = () =>{
   //  - titleとbodyを返す
   //  - イメージ -> return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト' }
     console.log("resultText")
-    switch (process) {
+    switch (answerHistory) {
       case ['A']:
         return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' }
       case ['B']:
@@ -92,7 +92,7 @@ export const Content = () =>{
       case "in_progress":
         return (<Question answerQuestion={answerQuestion} />)
       case "finished":
-        return (<Result text={resultText()}/>)
+        return (<Result text={resultText}/>)
       default:
         return null;
     }
