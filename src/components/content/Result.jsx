@@ -10,12 +10,8 @@ export const Result = (props) =>{
       <div className="result-content">
         <h2>today’s   totonoi   point</h2>
         <div className="text-content">
-          {/* TODO: 2. props.textからtitleとbodyを取得して表示する */}
-
-
           <h3 >{props.text.title}</h3>
           <p>{props.text.body}</p>
-
         </div>
         {/*<img src={resultImg} alt=""/>*/}
       </div>
