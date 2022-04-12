@@ -5,7 +5,7 @@ import {useState} from "react";
 import {Question} from "./content/Question";
 import {QuestionStart} from "./content/QuestionStart";
 import {Result} from "./content/Result";
-import {RESULT_TEXTS} from "./content/REUSLT_TEXTS";
+import {RESULT_TEXTS} from "./content/RESULT_TEXTS";
 
 export const Content = () =>{
   console.log("Content")
@@ -79,20 +79,8 @@ export const Content = () =>{
     const result = RESULT_TEXTS[currentMonthName][answerHistoryString];
     return { title: result.title, body: result.body };
 
-  //  TODO: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
+  //  NOTE: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
   };
-
-  const RESULT_TEXTS = {
-    AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
-    AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-    ABA: { title: 'ABA title', body: 'ABA body' },
-    ABB: { title: 'ABB title', body: 'ABB body' },
-    BAA: { title: 'BAA title', body: 'BAA body' },
-    BAB: { title: 'BAB title', body: 'BAB body' },
-    BBA: { title: 'BBA title', body: 'BBA body' },
-    BBB: { title: 'BBB title', body: 'BBB body' },
-  }
-
 
   const ContentBody = () =>{
     console.log("ContentBody")
