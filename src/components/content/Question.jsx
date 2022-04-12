@@ -6,6 +6,7 @@ export const Question = (props) =>{
     <QuestionTop>
       <div className="question-number">
         <p>・・・</p>
+        {/* TODO: 5 3/5 を動的に変化させる */}
         <p>3/5</p>
       </div>
       <div className="question">
