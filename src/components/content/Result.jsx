@@ -10,10 +10,15 @@ export const Result = (props) =>{
       <div className="result-content">
         <h2>today’s   totonoi   point</h2>
         <div className="text-content">
-          <h3 >{props.text.title}</h3>
-          <p>{props.text.body}</p>
+          <div className="text-block">
+            <h3 >{props.text.title}</h3>
+            <p>{props.text.body}</p>
+          </div>
+          <div className="result-image">
+            <img src={resultImg} alt=""/>
+          </div>
         </div>
-        {/*<img src={resultImg} alt=""/>*/}
+
       </div>
 
     </ResultStyle>
@@ -23,24 +28,36 @@ export const Result = (props) =>{
 const ResultStyle = styled.div`
   background: #f8f8f8;
   height: 700px;
+  max-width: 1200px;
   .result-content{
     display: grid;
     grid-template-columns: 400px 500px;
-    justify-content: center;
+    justify-items: center;
     padding: 8% 3%;
     h2{
       font-size: 13px ;
     }
     .text-content{
       background: white;
-      margin-top: 100px;
-      padding: 0 100px 135px;
-      h3{
-        font-size: 24px;
+      margin: 50px 100px 0 0;
+      padding: 0 100px 200px;
+      position: relative;
+      .text-block{
+        width: 100%;
+        margin-top: 100px;
+        line-height: 2;
+      }
+        h3{
+          font-size: 24px;
+        }
+      }
+      
+      .result-image{
+        position: absolute;
+        bottom: 30px;
+        left: -300px;
+        max-width: 350px;
+      }
       }
     }
-    //img{
-    //  width: 500px;
-    //}
-  }
 `;
