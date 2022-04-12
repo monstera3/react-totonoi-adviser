@@ -69,6 +69,7 @@ export const Content = () =>{
   const resultText = () => {
     //  NOTE: answerHistoryの内容によって結果の文章を返す
     console.log("resultText")
+    console.log(answerHistory);
     switch (answerHistory[0]) {
       case 'A':
         return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' }
