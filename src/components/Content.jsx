@@ -20,7 +20,7 @@ export const Content = () =>{
   ]
   // - [x] Questionコンポーネントのpropsにquestionを渡す
   // - [x] Questionコンポーネントでprops.questionから受け取ったquestionを表示する
-  // - [ ] answerHistoryに応じてResultをだし分ける
+  // - [x] answerHistoryに応じてResultをだし分ける
   const QUESTION_TOTAL_COUNT = 3;
   // NOTE: process: 進行状況
   // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
@@ -70,16 +70,9 @@ export const Content = () =>{
     //  NOTE: answerHistoryの内容によって結果の文章を返す
     console.log("resultText")
     console.log(answerHistory);
-    switch (answerHistory[0]) {
-      case 'A':
-        return { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' }
-      case 'B':
-        return { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' }
-      case ['A', 'B', 'A']:
-        return { title: '「座っている時間」をできるだけ短くするC', body: '説明テキストC' }
-      default:
-        return null;
-    }
+    const answerHistoryString = answerHistory.join('');
+    const result = RESULT_TEXTS[answerHistoryString];
+    return { title: result.title, body: result.body };
 
   //  TODO: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
   };
