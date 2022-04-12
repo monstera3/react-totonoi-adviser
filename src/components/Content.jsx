@@ -91,7 +91,8 @@ export const Content = () =>{
       case "not_started":
         return (<QuestionStart startQuestion={startQuestion} />)
       case "in_progress":
-        const question = QUESTION_LIST[currentQuestionNumber-1];
+        const questionIndex = currentQuestionNumber-1;
+        const question = QUESTION_LIST[questionIndex];
         return (<Question answerQuestion={answerQuestion} question={question} />)
       //質問３.currentQuestionNumberはどこを指している？
       case "finished":
