@@ -86,12 +86,12 @@ export const Content = () =>{
   const RESULT_TEXTS = {
     AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
     AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
-    ABA: { title: 'aa', body: 'bb' },
-    ABB: { title: 'aa', body: 'bb' },
-    BAA: { title: 'aa', body: 'bb' },
-    BAB: { title: 'aa', body: 'bb' },
-    BBA: { title: 'aa', body: 'bb' },
-    BBB: { title: 'aa', body: 'bb' },
+    ABA: { title: 'ABA title', body: 'ABA body' },
+    ABB: { title: 'ABB title', body: 'ABB body' },
+    BAA: { title: 'BAA title', body: 'BAA body' },
+    BAB: { title: 'BAB title', body: 'BAB body' },
+    BBA: { title: 'BBA title', body: 'BBA body' },
+    BBB: { title: 'BBB title', body: 'BBB body' },
   }
 
 
