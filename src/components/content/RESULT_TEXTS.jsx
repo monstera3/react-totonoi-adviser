@@ -36,7 +36,7 @@ export const RESULT_TEXTS = {
   },
 
   April: {
-    AAA: { title: '花見をして。心身を「春モード」にする', body: '説明テキスト' },
+    AAA: { title: '花見をして、心身を「春モード」にする', body: '説明テキスト' },
     AAB: { title: '朝の通勤では、ウォームアップのつもりで積極的に歩く', body: '説明テキストB' },
     ABA: { title: '週に1日、睡眠不足を補う「眠りの日」をつくる', body: 'ABA body' },
     ABB: { title: 'お酒を1杯飲んだら、水を1杯飲むようにする', body: 'ABB body' },
