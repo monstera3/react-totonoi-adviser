@@ -11,6 +11,7 @@ export const Question = (props) =>{
       <div className="question">
         <p>{props.question.title}</p>
         {/*質問１.{props.question.title}はcontentの91行目にとぶ？*/}
+        {/* <Question hoge={aaaa}> のように定義するとQuestionコンポーネントの内部で {props.hoge} として取得できる */}
         {/*質問２.↓の['A']はどういう意味？*/}
         <button onClick={() => props.answerQuestion('A')} className="a-answer">A.  {props.question.options[0]}</button>
         <button onClick={() => props.answerQuestion('B')} className="b-answer">B.  {props.question.options[1]}</button>
