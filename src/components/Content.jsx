@@ -80,9 +80,9 @@ export const Content = () =>{
   };
 
   const QUESTION_LIST = [
-    {title: 'どんな気分？', options: [{ A: 'わくわく、明るい気持ち' }, { B: '不安、落ち込み気味' }] },
-    {title: '天気は？', options: [{ A: '晴れ' }, { B: '曇り、雨' }] },
-    {title: '休日の過ごし方は？', options: [{ A: '外に出かけるアウトドア派' }, { B: '家の中で過ごすインドア派' }] },
+    {title: 'どんな気分？', options: ['わくわく、明るい気持ち', '不安、落ち込み気味'] },
+    {title: '天気は？', options: ['晴れ', '曇り、雨'] },
+    {title: '休日の過ごし方は？', options: ['外に出かけるアウトドア派', '家の中で過ごすインドア派'] },
   ]
 
   const ContentBody = () =>{
