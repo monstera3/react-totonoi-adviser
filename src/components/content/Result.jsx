@@ -33,7 +33,7 @@ const ResultStyle = styled.div`
     display: grid;
     justify-items: center;
     justify-content: space-around;
-    grid-template-columns: 500px 500px;
+    grid-template-columns: 500px 500px; 
     padding: 8% 3%;
     h2{
       font-size: 13px ;
