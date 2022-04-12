@@ -10,6 +10,8 @@ export const Question = (props) =>{
       </div>
       <div className="question">
         <p>{props.question.question}</p>
+        {/*質問１.{props.question.question}はcontentの91行目にとぶ？*/}
+        {/*質問２.↓の['A']はどういう意味？*/}
         <button onClick={() => props.answerQuestion('A')} className="a-answer">A.{props.question.options[0]['A']}</button>
         <button onClick={() => props.answerQuestion('B')} className="b-answer">B.{props.question.options[1]['B']}</button>
       </div>

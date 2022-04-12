@@ -49,6 +49,7 @@ export const Content = () =>{
         return 0;
       } else { // NOTE: まだ質問が残っている場合
         return prevState + 1;
+      //  質問４.２問目にいくコードの流れが分からない。この後どこに飛ぶ？
       }
     });
   }
@@ -61,6 +62,7 @@ export const Content = () =>{
       case "in_progress":
         return question1Img;
       case "finished":
+        //質問５.ここに灰色の背景を入れたいけど画像じゃないとだめ？
         return null;
       default:
         return null;
@@ -72,6 +74,7 @@ export const Content = () =>{
     // NOTE: 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
     console.log("resultText")
     console.log(answerHistory);
+    // 質問６.ここ全体の流れが分からない
     const answerHistoryString = answerHistory.join('');
     const currentMonthIndex = new Date().getMonth();
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -89,6 +92,7 @@ export const Content = () =>{
         return (<QuestionStart startQuestion={startQuestion} />)
       case "in_progress":
         return (<Question answerQuestion={answerQuestion} question={QUESTION_LIST[currentQuestionNumber-1]} />)
+      //質問３.currentQuestionNumberはどこを指している？
       case "finished":
         return (<Result text={resultText()}/>)
       default:

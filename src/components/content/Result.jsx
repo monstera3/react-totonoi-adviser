@@ -58,6 +58,5 @@ const ResultStyle = styled.div`
         left: -300px;
         max-width: 350px;
       }
-      }
-    }
+  }
 `;
