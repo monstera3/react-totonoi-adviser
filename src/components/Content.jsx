@@ -44,6 +44,8 @@ export const Content = () =>{
       } else { // NOTE: まだ質問が残っている場合
         return prevState + 1;
       //  質問４.２問目にいくコードの流れが分からない。この後どこに飛ぶ？
+      //  set~ 関数が呼ばれるとContentコンポーネントのreturnが再度実行され、
+      //  Questionコンポーネントに渡されるquestionが次の問題になっている
       }
     });
   }
