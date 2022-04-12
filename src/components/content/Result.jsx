@@ -28,7 +28,7 @@ export const Result = (props) =>{
 const ResultStyle = styled.div`
   background: #f8f8f8;
   height: 700px;
-  max-width: 1200px;
+  width: 1200px;
   .result-content{
     display: grid;
     grid-template-columns: 400px 500px;
