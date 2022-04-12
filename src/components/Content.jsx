@@ -69,10 +69,14 @@ export const Content = () =>{
 
   const resultText = () => {
     //  NOTE: answerHistoryの内容によって結果の文章を返す
+    // NOTE: 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
     console.log("resultText")
     console.log(answerHistory);
     const answerHistoryString = answerHistory.join('');
-    const result = RESULT_TEXTS[answerHistoryString];
+    const currentMonthIndex = new Date().getMonth();
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const currentMonthName = monthNames[currentMonthIndex];
+    const result = RESULT_TEXTS[currentMonthName][answerHistoryString];
     return { title: result.title, body: result.body };
 
   //  TODO: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
