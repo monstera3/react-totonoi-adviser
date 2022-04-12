@@ -17,7 +17,7 @@ export const Content = () =>{
   const QUESTION_LIST = [
     {question: 'どんな気分？', options: [{ A: 'わくわく、明るい気持ち' }, { B: '不安、落ち込み気味' }] },
     {question: '天気は？', options: [{ A: '晴れ' }, { B: '曇り、雨' }] },
-    {question: '4休日の過ごし方は？', options: [{ A: '外に出かけるアウトドア派' }, { B: '家の中で過ごすインドア派' }] },
+    {question: '休日の過ごし方は？', options: [{ A: '外に出かけるアウトドア派' }, { B: '家の中で過ごすインドア派' }] },
   ]
   // - [x] Questionコンポーネントのpropsにquestionを渡す
   // - [x] Questionコンポーネントでprops.questionから受け取ったquestionを表示する
