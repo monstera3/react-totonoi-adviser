@@ -31,8 +31,9 @@ const ResultStyle = styled.div`
   width: 1200px;
   .result-content{
     display: grid;
-    grid-template-columns: 400px 500px;
     justify-items: center;
+    justify-content: space-around;
+    grid-template-columns: 500px 500px;
     padding: 8% 3%;
     h2{
       font-size: 13px ;
@@ -40,7 +41,8 @@ const ResultStyle = styled.div`
     .text-content{
       background: white;
       margin: 50px 100px 0 0;
-      padding: 0 100px 200px;
+      width: 550px;
+      padding: 0 50px 100px 110px;
       position: relative;
       .text-block{
         width: 100%;
@@ -48,8 +50,14 @@ const ResultStyle = styled.div`
         line-height: 2;
       }
         h3{
-          font-size: 24px;
+          font-size: 20px;
+          margin-bottom: 50px;
         }
+      p{
+        font-size: 16px;
+        line-height: 2.5;
+      }
+      
       }
       
       .result-image{
