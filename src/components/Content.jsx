@@ -13,10 +13,11 @@ export const Content = () =>{
   // - QUESTION_TOTAL_COUNTを3などに設定する
   // - QUESTION_LISTを作成する
   // -> (イメージ)
-  // const QUESTION_LIST = [
-  //   {question: 'aaa', options: [{ A: 'わくわく、うきうき' }, { B: '不安、落ち込み気味' }] },
-  //   {question: 'aaa', options: [{ A: 'わくわく、うきうき' }, { B: '不安、落ち込み気味' }] },
-  // ]
+  const QUESTION_LIST = [
+    {question: 'どんな気分？', options: [{ A: 'わくわく、うきうき' }, { B: '不安、落ち込み気味' }] },
+    {question: '天気は？', options: [{ A: '晴れ' }, { B: '曇り、雨' }] },
+    {question: '年齢は？', options: [{ A: '20代' }, { B: '30代以上' }] },
+  ]
   // - Questionコンポーネントのpropsにquestionを渡す
   // - Questionコンポーネントでprops.questionから受け取ったquestionを表示する
   const QUESTION_TOTAL_COUNT = 3;
