@@ -19,7 +19,7 @@ export const Content = () =>{
   // ]
   // - Questionコンポーネントのpropsにquestionを渡す
   // - Questionコンポーネントでprops.questionから受け取ったquestionを表示する
-  const QUESTION_TOTAL_COUNT = 1;
+  const QUESTION_TOTAL_COUNT = 3;
   // NOTE: process: 進行状況
   // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
   const [process,setProcess] = useState('not_started'); // 'in_progress', 'finished'
