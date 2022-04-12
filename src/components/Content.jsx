@@ -5,6 +5,7 @@ import {useState} from "react";
 import {Question} from "./content/Question";
 import {QuestionStart} from "./content/QuestionStart";
 import {Result} from "./content/Result";
+import {RESULT_TEXTS} from "./content/REUSLT_TEXTS";
 
 export const Content = () =>{
   console.log("Content")
