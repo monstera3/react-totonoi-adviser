@@ -9,9 +9,9 @@ export const Question = (props) =>{
         <p>3/5</p>
       </div>
       <div className="question">
-        <p>1.今はどんな気分？</p>
-        <button onClick={() => props.answerQuestion('A')} className="a-answer">A.わくわく、うきうき</button>
-        <button onClick={() => props.answerQuestion('B')} className="b-answer">B.不安、落ち込み気味</button>
+        <p>{props.question.question}</p>
+        <button onClick={() => props.answerQuestion('A')} className="a-answer">A.{props.question.options[0]['A']}</button>
+        <button onClick={() => props.answerQuestion('B')} className="b-answer">B.{props.question.options[1]['B']}</button>
       </div>
     </QuestionTop>
   );

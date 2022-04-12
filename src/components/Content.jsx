@@ -19,7 +19,7 @@ export const Content = () =>{
     {question: '年齢は？', options: [{ A: '20代' }, { B: '30代以上' }] },
   ]
   // - [x] Questionコンポーネントのpropsにquestionを渡す
-  // - [ ] Questionコンポーネントでprops.questionから受け取ったquestionを表示する
+  // - [x] Questionコンポーネントでprops.questionから受け取ったquestionを表示する
   const QUESTION_TOTAL_COUNT = 3;
   // NOTE: process: 進行状況
   // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
