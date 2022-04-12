@@ -13,12 +13,6 @@ export const Content = () =>{
   // NOTE: 3. 複数の問題に対応する
   // -[x] QUESTION_TOTAL_COUNTを3などに設定する
   // -[x] QUESTION_LISTを作成する
-  // -> (イメージ)
-  const QUESTION_LIST = [
-    {title: 'どんな気分？', options: [{ A: 'わくわく、明るい気持ち' }, { B: '不安、落ち込み気味' }] },
-    {title: '天気は？', options: [{ A: '晴れ' }, { B: '曇り、雨' }] },
-    {title: '休日の過ごし方は？', options: [{ A: '外に出かけるアウトドア派' }, { B: '家の中で過ごすインドア派' }] },
-  ]
   // - [x] Questionコンポーネントのpropsにquestionを渡す
   // - [x] Questionコンポーネントでprops.questionから受け取ったquestionを表示する
   // - [x] answerHistoryに応じてResultをだし分ける
@@ -84,6 +78,12 @@ export const Content = () =>{
 
   //  NOTE: 4. 文章のパターンを12ヶ月分用意して回答した月によってだし分ける
   };
+
+  const QUESTION_LIST = [
+    {title: 'どんな気分？', options: [{ A: 'わくわく、明るい気持ち' }, { B: '不安、落ち込み気味' }] },
+    {title: '天気は？', options: [{ A: '晴れ' }, { B: '曇り、雨' }] },
+    {title: '休日の過ごし方は？', options: [{ A: '外に出かけるアウトドア派' }, { B: '家の中で過ごすインドア派' }] },
+  ]
 
   const ContentBody = () =>{
     console.log("ContentBody")
