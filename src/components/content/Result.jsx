@@ -8,7 +8,7 @@ export const Result = (props) =>{
   return(
     <ResultStyle>
       <div className="result-content">
-        <h2>today’s   totonoi   point</h2>
+        <h2>today’s totonoi point</h2>
         <div className="text-content">
           <div className="text-block">
             <h3 >{props.text.title}</h3>
@@ -37,6 +37,16 @@ const ResultStyle = styled.div`
     padding: 8% 3%;
     h2{
       font-size: 13px ;
+      font-weight: normal;
+      ::after{
+        content: '';
+        display: inline-block;
+        border-bottom: 1px solid #b4b4b4;
+        width: 150px;
+        position: relative;
+        bottom: 0.25em;
+        left: 40px;
+      }
     }
     .text-content{
       background: white;
