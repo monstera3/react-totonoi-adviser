@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 export const Question = (props) =>{
   console.log("Question")
-  const progressDots = Array(props.currentNumber).fill('◎').map((icon, i) => <span key={i}>{icon}</span>);
-  const futureDots = Array(props.totalCount - props.currentNumber).fill('・').map((icon, i) => <span key={i}>{icon}</span>)
+  const iconList = (number, icon) => {
+    return Array(number).fill(icon).map((icon, i) => <span key={i}>{icon}</span>);
+  }
+  const progressDots = iconList(props.currentNumber, '◎');
+  const futureDots = iconList(props.totalCount - props.currentNumber, '・')
   return(
     <QuestionTop>
       <div className="question-number">
