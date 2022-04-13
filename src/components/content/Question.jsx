@@ -7,7 +7,7 @@ export const Question = (props) =>{
       <div className="question-number">
         {/* TODO: 6 ・・・を動的に変化させる */}
         <p>・・・</p>
-        {/* TODO: 5 3/5 を動的に変化させる */}
+        {/* NOTE: 5 3/5 を動的に変化させる */}
         <p>{props.currentNumber}/{props.totalCount}</p>
       </div>
       <div className="question">
