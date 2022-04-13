@@ -95,7 +95,12 @@ export const Content = () =>{
       case "in_progress":
         const questionIndex = currentQuestionNumber-1;
         const question = QUESTION_LIST[questionIndex];
-        return (<Question answerQuestion={answerQuestion} question={question} />)
+        return (
+          <Question
+            answerQuestion={answerQuestion}
+            question={question}
+          />
+        )
       //質問３.currentQuestionNumberはどこを指している？
       //  const [currentQuestionNumber,setCurrentQuestionNumber] で定義したもの
       case "finished":
