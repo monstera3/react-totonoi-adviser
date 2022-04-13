@@ -99,6 +99,8 @@ export const Content = () =>{
           <Question
             answerQuestion={answerQuestion}
             question={question}
+            totalCount={QUESTION_TOTAL_COUNT}
+            currentNumber={currentQuestionNumber}
           />
         )
       //質問３.currentQuestionNumberはどこを指している？
