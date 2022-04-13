@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const Question = (props) =>{
   console.log("Question")
+  const progressDots = [...Array(props.currentNumber)].map((_, i) => <span key={i}>◎</span>);
+  const futureDots = [...Array(props.totalCount - props.currentNumber)].map((_, i) => <span key={i}>・</span>)
   return(
     <QuestionTop>
       <div className="question-number">
-        {/* TODO: 6 ・・・を動的に変化させる */}
-        <p>・・・</p>
+        {/* NOTE: 6 ・・・を動的に変化させる */}
+        <p>{progressDots}{futureDots}</p>
         {/* NOTE: 5 3/5 を動的に変化させる */}
         <p>{props.currentNumber}/{props.totalCount}</p>
       </div>
