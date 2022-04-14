@@ -10,8 +10,8 @@ export const Question = (props) =>{
       </div>
       <div className="question">
         <p>1.今はどんな気分？</p>
-        <button  className="a-answer">A.わくわく、うきうき</button>
-        <button className="b-answer">B.不安、落ち込み気味</button>
+        <button  onClick={()=> props.answerQuestion('A')} className="a-answer">A.わくわく、うきうき</button>
+        <button onClick={()=> props.answerQuestion('B')}  className="b-answer">B.不安、落ち込み気味</button>
       </div>
     </QuestionTop>
   );
