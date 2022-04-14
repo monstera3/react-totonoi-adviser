@@ -9,12 +9,40 @@ import {Result} from "./content/Result";
 export const Content = () =>{
   console.log("Content")
 
+  // NOTE: process: 進行状況
+  // not_started: 初期画面, in_progress: 診断中, finished: 診断結果
+  const [process,setProcess] = useState('not_started')
 
+  const ContentBody = () => {
+    console.log("ContentBody")
+    switch (process){
+      case "not_started":
+        return(<QuestionStart />)
+      case "in_progress":
+        return (<Question/>)
+      case ("finished"):
+        return (<Result/>)
+    }
+  };
+
+  const ContentImg = () => {
+    console.log("ContentImg")
+    switch (process){
+      case "not_started":
+        return(heroImg)
+      case "in_progress":
+        return (question1Img)
+      case ("finished"):
+        return null;
+      default:
+        return null;
+    }
+  }
 
   return(
     <div>
-      <ContentStyle>
-        a
+      <ContentStyle backgroundImg={ContentImg}>
+        {ContentBody()}
       </ContentStyle>
     </div>
   );
