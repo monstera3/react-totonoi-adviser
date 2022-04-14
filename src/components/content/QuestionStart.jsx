@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import {useState} from "react";
 
-export const QuestionStart = () =>{
+export const QuestionStart = (props) =>{
   console.log("QuestionStart")
   return(
     <QuestionStartStyle>
@@ -9,7 +8,7 @@ export const QuestionStart = () =>{
         <div className="title">totonoi</div>
         <div className="catch-copy">自律神経を整える</div>
       </div>
-      <button >診断 START</button>
+      <button onClick={props.startQuestion}>診断 START</button>
     </QuestionStartStyle>
   );
 };
