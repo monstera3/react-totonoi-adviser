@@ -11,7 +11,7 @@ export const Content = () =>{
   // NOTE:2 スタートボタンクリックで次の画面に切り替わる
   // NOTE:3 AorBをクリックしたら結果画面に切り替わる
   // NOTE:4 質問内容が変わり3問目で結果に切り替わる
-  // NOTE:5
+  // NOTE:5 選んだ回答によって答えが変わる
   // NOTE:6
   // NOTE:7
 
@@ -28,6 +28,17 @@ export const Content = () =>{
     {title: '天気は？', options: ['晴れ', '曇り、雨'] },
     {title: '休日の過ごし方は？', options: ['外に出かけるアウトドア派', '家の中で過ごすインドア派'] },
   ]
+  const RESULT_TEXTS = {
+    AAA: { title: '「座っている時間」をできるだけ短くする', body: '説明テキスト' },
+    AAB: { title: '「座っている時間」をできるだけ短くするB', body: '説明テキストB' },
+    ABA: { title: 'ABA title', body: 'ABA body' },
+    ABB: { title: 'ABB title', body: 'ABB body' },
+    BAA: { title: 'BAA title', body: 'BAA body' },
+    BAB: { title: 'BAB title', body: 'BAB body' },
+    BBA: { title: 'BBA title', body: 'BBA body' },
+    BBB: { title: 'BBB title', body: 'BBB body' },
+  }
+
 
   const ContentBody = (process,startQuestion) => {
     switch (process){
@@ -41,7 +52,7 @@ export const Content = () =>{
           question={question}
         />)
       case ("finished"):
-        return (<Result/>)
+        return (<Result resultText={resultText()} />)
       default:
         return null;
     }
@@ -81,7 +92,16 @@ export const Content = () =>{
     });
   }
 
-
+  //回答によって答えが変わる
+  const resultText = () => {
+    //  NOTE: answerHistoryの内容によって結果の文章を返す
+    const answerHistoryString = answerHistory.join('');
+    const result = RESULT_TEXTS[answerHistoryString]
+    return{
+      title:result.titl,
+      body: result.body
+    };
+  }
 
 
 
