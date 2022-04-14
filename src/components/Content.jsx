@@ -5,6 +5,7 @@ import {useState} from "react";
 import {Question} from "./content/Question";
 import {QuestionStart} from "./content/QuestionStart";
 import {Result} from "./content/Result";
+import {RESULT_TEXTS} from "./content/RESULT_TEXTS";
 
 export const Content = () =>{
   // NOTE:1 進行状況によって背景とコンポーネントをかえる
@@ -12,7 +13,7 @@ export const Content = () =>{
   // NOTE:3 AorBをクリックしたら結果画面に切り替わる
   // NOTE:4 質問内容が変わり3問目で結果に切り替わる
   // NOTE:5 選んだ回答によって答えが変わる
-  // NOTE:6
+  // NOTE:6 結果を12ヶ月分用意する
   // NOTE:7
 
   // process: 進行状況
@@ -40,7 +41,7 @@ export const Content = () =>{
   }
 
 
-  const ContentBody = (process,startQuestion) => {
+  const ContentBody = () => {
     switch (process){
       case "not_started":
         return(<QuestionStart startQuestion={startQuestion}/>)
@@ -58,7 +59,7 @@ export const Content = () =>{
     }
   };
 
-  const ContentImg = (process) => {
+  const ContentImg = () => {
     switch (process){
       case "not_started":
         return(heroImg)
@@ -96,19 +97,19 @@ export const Content = () =>{
   const resultText = () => {
     //  NOTE: answerHistoryの内容によって結果の文章を返す
     const answerHistoryString = answerHistory.join('');
-    const result = RESULT_TEXTS[answerHistoryString]
-    return{
-      title:result.titl,
-      body: result.body
-    };
-  }
+    const currentMonthIndex = new Date().getMonth();
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const currentMonthName = monthNames[currentMonthIndex];
+    const result = RESULT_TEXTS[currentMonthName][answerHistoryString]
+    return{ title: result.title, body: result.body };
+  };
 
 
 
   return(
     <div>
-      <ContentStyle backgroundImg={ContentImg(process)}>
-        {ContentBody(process,startQuestion)}
+      <ContentStyle backgroundImg={ContentImg()}>
+        {ContentBody()}
       </ContentStyle>
     </div>
   );
