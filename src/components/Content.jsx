@@ -7,12 +7,10 @@ import {QuestionStart} from "./content/QuestionStart";
 import {Result} from "./content/Result";
 
 export const Content = () =>{
-  console.log("Content")
-
   // NOTE:1 進行状況によって背景とコンポーネントをかえる
   // NOTE:2 スタートボタンクリックで次の画面に切り替わる
   // NOTE:3 AorBをクリックしたら結果画面に切り替わる
-  // NOTE:4
+  // NOTE:4 質問内容が変わり3問目で結果に切り替わる
   // NOTE:5
   // NOTE:6
   // NOTE:7
@@ -22,18 +20,25 @@ export const Content = () =>{
   const [process,setProcess] = useState('not_started')
   // NOTE: currentQuestionNumber: 現在の質問番号
   const [currentQuestionNumber,setCurrentQuestionNumber] = useState(0); // 1, 2, 3
-  const QUESTION_TOTAL_COUNT = 1;
-  const [answer,setAnswer] = useState([]); // ['a', 'b', 'c', 'a']
+  const QUESTION_TOTAL_COUNT = 3;
+  const [answerHistory,setAnswerHistory] = useState([]); // ['A', 'B', 'A', 'A']
 
+  const QUESTION_LIST = [
+    {title: 'どんな気分？', options: ['わくわく、明るい気持ち', '不安、落ち込み気味'] },
+    {title: '天気は？', options: ['晴れ', '曇り、雨'] },
+    {title: '休日の過ごし方は？', options: ['外に出かけるアウトドア派', '家の中で過ごすインドア派'] },
+  ]
 
   const ContentBody = (process,startQuestion) => {
-    console.log("ContentBody")
     switch (process){
       case "not_started":
         return(<QuestionStart startQuestion={startQuestion}/>)
       case "in_progress":
+        const questionIndex = currentQuestionNumber-1;
+        const question = QUESTION_LIST[questionIndex];
         return (<Question
           answerQuestion={answerQuestion}
+          question={question}
         />)
       case ("finished"):
         return (<Result/>)
@@ -43,7 +48,6 @@ export const Content = () =>{
   };
 
   const ContentImg = (process) => {
-    console.log("ContentImg")
     switch (process){
       case "not_started":
         return(heroImg)
@@ -64,7 +68,9 @@ export const Content = () =>{
 
   //A or Bをクリック
   const answerQuestion = (newAnswer) => {
-    setAnswer([...answer, newAnswer]);
+    // NOTE: ユーザーの回答をanswerHistoryに追加
+    setAnswerHistory([...answerHistory, newAnswer]);
+    // NOTE: 質問番号を次に進める
     setCurrentQuestionNumber(prevState => {
       if(prevState === QUESTION_TOTAL_COUNT){
         setProcess('finished');
